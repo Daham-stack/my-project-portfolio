@@ -29,34 +29,43 @@
       nav a:hover {
         text-decoration: underline;
       }
+
       section {
         margin-top: 36px;
-  background-color: white;
-  padding: 24px;
-  border-radius: 12px;
-}
-@media (max-width: 600px) {
-  body {
-    padding: 20px;
-  }
+        background-color: white;
+        padding: 24px;
+        border-radius: 12px;
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+      }
 
-  nav a {
-    margin-right: 12px;
-  }
-}
-button {
-  background-color: #2563eb;
-  color: white;
-  border: none;
-  padding: 12px 20px;
-  border-radius: 8px;
-  font-size: 16px;
-  cursor: pointer;
-}
+      section:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 8px 20px rgba(30, 41, 59, 0.12);
+      }
 
-button:hover {
-  background-color: #1d4ed8;
-}
+      button {
+        background-color: #2563eb;
+        color: white;
+        border: none;
+        padding: 12px 20px;
+        border-radius: 8px;
+        font-size: 16px;
+        cursor: pointer;
+      }
+
+      button:hover {
+        background-color: #1d4ed8;
+      }
+
+      @media (max-width: 600px) {
+        body {
+          padding: 20px;
+        }
+
+        nav a {
+          margin-right: 12px;
+        }
+      }
     </style>
   </head>
 
@@ -66,42 +75,43 @@ button:hover {
       <a href="#projects">Projects</a>
       <a href="#skills">Skills</a>
     </nav>
-    
 
     <h1>Hello, I'm Daham Kumaradasa</h1>
     <p>I'm an engineering student learning to build for the web.</p>
 
     <section id="about">
-  <h2>About Me</h2>
-  <p>
-    I'm an engineering student interested in solving problems and learning
-    new technologies.
-  </p>
+      <h2>About Me</h2>
+      <p>
+        I'm an engineering student interested in solving problems and learning
+        new technologies.
+      </p>
 
-  <button id="hello-button">Say hello</button>
-  <p id="message"></p>
-</section>
+      <button id="hello-button">Say hello</button>
+      <p id="message"></p>
+    </section>
+
     <section id="projects">
-  <h2>Projects</h2>
+      <h2>Projects</h2>
 
-  <h3>Personal Portfolio Website</h3>
-  <p>
-    A website I'm building to introduce myself and share what I learn in
-    engineering and web development.
-  </p>
-</section>
+      <h3>Personal Portfolio Website</h3>
+      <p>
+        A website I'm building to introduce myself and share what I learn in
+        engineering and web development.
+      </p>
+    </section>
 
     <section id="skills">
       <h2>Skills</h2>
       <p>Currently learning: HTML, CSS, and JavaScript.</p>
     </section>
-    <script>
-  const button = document.getElementById("hello-button");
-  const message = document.getElementById("message");
 
-  button.addEventListener("click", function () {
-    message.textContent = "Thanks for visiting my portfolio!";
-  });
-</script>
+    <script>
+      const button = document.getElementById("hello-button");
+      const message = document.getElementById("message");
+
+      button.addEventListener("click", function () {
+        message.textContent = "Thanks for visiting my portfolio!";
+      });
+    </script>
   </body>
 </html>
