@@ -63,6 +63,8 @@
       <p>
         I'm an engineering student interested in solving problems and learning
         new technologies.
+        <button id="hello-button">Say hello</button>
+<p id="message"></p>
       </p>
     </section>
     <section id="projects">
@@ -79,5 +81,13 @@
       <h2>Skills</h2>
       <p>Currently learning: HTML, CSS, and JavaScript.</p>
     </section>
+    <script>
+  const button = document.getElementById("hello-button");
+  const message = document.getElementById("message");
+
+  button.addEventListener("click", function () {
+    message.textContent = "Thanks for visiting my portfolio!";
+  });
+</script>
   </body>
 </html>
